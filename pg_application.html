@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>UG Apllication</title>
+	<link rel="stylesheet" type="text/css" href="application.css">
+</head>
+<body>
+	<a href="index.php" class="button1">HOME</a>
+<div class="form">
+	<center>
+		<h1>PG Application</h1>
+	<form onsubmit="sendEmail();reset();return false;">
+		
+		<div class="row">
+
+			     <div class="input-group">
+				    <input type="text" id="name" required>
+				    <label for="name">Name</label>
+			     </div>
+
+			     <div class="input-group">
+				    <input type="text" id="clg" required>
+				    <label for="clg">UG College Name</label>
+			     </div>
+
+			     <div class="input-group">
+				    <input type="text" id="degree" required>
+				    <label for="degree">Degree Pursued</label>
+			     </div>
+
+			     <div class="input-group">
+				    <input type="text" id="mark" required>
+				    <label for="mark"> CGBA</label>
+			     </div>
+
+			     <div class="input-group">
+				    <input type="email" id="email" required>
+				    <label for="email"> Email</label>
+			     </div>
+
+			     <div class="input-group">
+				    <input type="text" id="phno" required>
+				    <label for="phno"> Phone Number</label>
+			     </div>
+
+			     <div class="input-group">
+				    <input type="text" id="address" required>
+				    <label for="address"> Address</label>
+			     </div>
+
+			     <div class="input-group" style="position: relative; bottom:8px;">
+				    <label for="department" style="position: relative; left: -150px;">Course</label>
+				    <div class="select">
+				    	<select id="department">
+				    		<option>--select--</option>
+				    		<option>M.A.(Tamil)</option>
+				    		<option>M.Phil.(Tamil)</option>
+				    		<option>M.A.(English)</option>
+				    		<option>MSc.,Maths</option>
+				    		<option>MSc.,CS & IT</option>
+				    	</select>
+				    </div>
+			     </div>
+
+				 <button type="submit">Apply</button>
+			  </div>
+			 
+	        </form>	
+	 </center>
+</div>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+		function sendEmail(){
+			Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "sivaranjani.s628123@gmail.com",
+    Password : "9B6BAB1D474C423F9031D641E5E4BE6160A7",
+    To : 'sivaranjanisahadevan@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "MSN - Admission form",
+    Body : "Name: "+document.getElementById("name").value 
+         +"<br> Email: "+document.getElementById("email").value 
+         +"<br> Phone no: "+document.getElementById("phno").value 
+         +"<br> Address : "+document.getElementById("address").value
+         +"<br> Previous College : "+document.getElementById("clg").value
+         +"<br> Degree pursued : "+document.getElementById("degree").value
+         +"<br> CGBA : "+document.getElementById("mark").value
+         +"<br> Apply for : "+document.getElementById("department").value
+}).then(
+  message => alert("Applied Successfully !!")
+);
+	  }
+</script>
+</body>
+</html>

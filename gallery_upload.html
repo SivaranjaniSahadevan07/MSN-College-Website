@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Admin Panel</title>
+	<link rel="stylesheet" type="text/css" href="admin.css">
+	<style type="text/css">
+		.content{
+		    padding: 150px 0px 0px 350px;	
+		}
+
+		button{
+			padding: 10px 5px;
+			color: #fff;
+			outline: none;
+			background: darkblue;
+			border: 2px solid #fff;
+			width: 80%;
+			cursor: pointer;
+			height: 40px;
+			position: relative;
+			border-radius: 5px;
+		}
+		#form{
+			background-color: skyblue;
+			border-radius: 10px;
+		}
+		.form-group1{
+			padding: 20px;
+			margin-left: 50px;
+		}
+		.form-group2{
+			display: flex;
+			padding: 50px;
+		}
+		.remove{
+			background-color: red;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="header">
+		<h2><b><a href="admin_logged.php" style="color: orangered;">Admin Panel</a></b></h2>
+		<div class="logout">
+			<a href="logout.php" style="color:white;font-size: 20px;">Logout</a>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="menu">
+		<ul>
+			<li><a href="student_record.php">Student</a></li>
+			<li><a href="staff_record.php">Staff</a></li>
+			<li><a href="aluminae_record.php">Aluminae</a></li>
+			<li><a href="admin_msg.php">Message</a></li>
+			<li><a href="invite_aluminae.php">Invite</a></li>
+			<li><a href="#">Website</a>
+				<div class="sub_menu">
+					<ul>
+						<li><a href="gallery_upload.html">Gallery</a></li>
+						<li><a href="notice_board.php">Notice</a></li>
+						<li><a href="achieved.php">Achieved</a></li>
+				    </ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="content">
+		
+		<form id="form" enctype="multipart/form-data" method="POST">
+			<div class="form-group1">
+				<input type="file" class="form-control" id="image">
+			</div>
+			<div class="form-group2">
+				<button class="upload">Upload</button>
+				<button onclick="remove()" class="remove">Remove</button>
+			</div>
+		</form>
+	
+	</div>
+
+</body>
+<script src="gallery.js"></script>
+</html>

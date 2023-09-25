@@ -1,0 +1,110 @@
+		*{
+			padding: 0;
+			margin: 0;
+			margin-bottom: 0;
+		    margin-left: 0;
+		    margin-right: 0;
+		    margin-top: 0;
+		    padding-bottom: 0;
+		    padding-left: 0;
+		    padding-right: 0;
+		    padding-top: 0; 
+		}
+		body{
+			background-size: cover;
+			box-sizing: border-box;
+			background-color: skyblue;
+			font-family: serif,sans-serif;
+		}
+		.input-group{
+			margin-bottom: 38px;
+			position: relative;
+		}
+		input, textarea{
+			width: 100%;
+			padding: 10px;
+			outline: 0;
+			border: 2px solid black;
+			color: black;
+			background: #fff;
+			font-size: 18px;
+		}
+		label{
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			padding: 10px;
+			color: black;
+			font-weight: bold;
+			cursor: text;
+			transition: 0.2s;
+		}
+		button{
+			padding: 10px 0;
+			color: #fff;
+			outline: none;
+			background: darkblue;
+			border: 2px solid #fff;
+			width: 20%;
+			cursor: pointer;
+			height: 40px;
+			position: relative;
+			margin-left: 300px;
+			border-radius: 5px;
+		}
+		input:focus~label,
+		input:valid~label,
+		textarea:focus~label,
+		textarea:valid~label{
+			top: -35px;
+			font-size: 14px;
+		}
+		.row{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			width: 800px;
+			position: relative;
+			margin-top: 50px;
+			margin-left: 20px;
+		}
+		.row .input-group{
+			flex-basis: 48%;
+		}
+		select{
+			width: 400px;
+			height: 44px;
+			position:relative;
+			padding: 10px;
+			margin-right: -20px;
+			outline: 0;
+			border: 2px solid black;
+			color: black;
+			background: #fff;
+			font-size: 16px;
+			font-family: serif,sans-serif;
+			font-weight: bold;
+		}
+		.button1{
+				background-color: tomato;
+				color: white;
+				padding: 15px 20px;
+				margin: 80px;
+				position: absolute;
+				text-decoration: none;
+				border-radius: 10px;
+				font-weight: bold;
+				top: -60px;
+				left: 50px;
+		}
+		.button1:hover{
+				background-color: blue;
+				color: white;
+		}
+		h1{
+			padding-top: 80px;
+			color: darkblue;
+		}
